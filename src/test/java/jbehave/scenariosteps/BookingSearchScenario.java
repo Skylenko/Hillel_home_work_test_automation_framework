@@ -28,11 +28,12 @@ public class BookingSearchScenario {
     }
 
     @When("user selects 'Check Out' date by using following date: '$checkOutDate'")
-    public void typeCheckOutDatefinal(final String checkOutDate) {
+    public void typeCheckOutDate(final String checkOutDate) {
     }
 
     @When("user clicks on 'Search' button")
     public void clickSearchButton() {
+        hotelSearchPageSteps.clickSearchButton();
     }
 
     @Then("each item from 'Search Result' list contains '$searchedText'")

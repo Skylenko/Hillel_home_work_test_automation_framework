@@ -29,9 +29,15 @@ public class HotelSearchPageSteps extends ScenarioSteps {
 
     @Step
     public void typeCheckInDate(final String checkInDate) {
+
     }
 
     @Step
-    public void typeCheckOutDate(final String checkOytDate) {
+    public void typeCheckOutDate(final String checkOutDate) {
+    }
+
+    @Step
+    public void clickSearchButton() {
+        hotelsSearchPage.getSearchByCriteriaPanel().clickSearchButton();
     }
 }

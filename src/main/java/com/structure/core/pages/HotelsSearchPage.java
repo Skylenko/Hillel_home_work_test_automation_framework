@@ -1,5 +1,6 @@
 package com.structure.core.pages;
 
+import com.structure.core.panels.CrossProductPanel;
 import com.structure.core.panels.SearchByCriteriaPanel;
 import com.structure.core.webdriver.AbstractPage;
 import net.thucydides.core.annotations.DefaultUrl;
@@ -12,6 +13,8 @@ public class HotelsSearchPage extends AbstractPage {
 
     private static final String SEARCH_BY_CRITERIA_PANEL = "//form[@id='frm']";
 
+    private static final String CROSS_PRODUCT_BAR = "//div[@id='cross-product-bar']";
+
     public HotelsSearchPage(final WebDriver driver) {
         super(driver);
     }
@@ -20,4 +23,10 @@ public class HotelsSearchPage extends AbstractPage {
         withTimeoutOf(10, TimeUnit.SECONDS).waitFor(SEARCH_BY_CRITERIA_PANEL);
         return new SearchByCriteriaPanel(findBy(SEARCH_BY_CRITERIA_PANEL), this);
     }
+
+    public CrossProductPanel getCrossProductPanel() {
+        withTimeoutOf(10, TimeUnit.SECONDS).waitFor(CROSS_PRODUCT_BAR);
+        return new CrossProductPanel(findBy(CROSS_PRODUCT_BAR),this);
+    }
+
 }
