@@ -5,9 +5,8 @@ I want to be able to see the list of found flights, from Kiev to Tel Aviv
 
 Scenario: User should have possibility to see the list of found flights, using own searching criterias
 
-Given user has opened 'Booking.com' site
-
-When user clicks on 'Flights' button
+Given user has opened 'BookingFlights.com' site
+When user click on 'Flights' button
 And user selects 'Departure from' by using following value: 'Kiev'
 And user selects 'Arrival to' by using following value: 'Tel Aviv'
 And user selects 'Departure' date by using following date: '09/18/2017'

@@ -13,7 +13,7 @@ public class HotelsSearchPage extends AbstractPage {
 
     private static final String SEARCH_BY_CRITERIA_PANEL = "//form[@id='frm']";
 
-    private static final String CROSS_PRODUCT_BAR = "//div[@id='cross-product-bar']";
+    private static final String CROSS_PRODUCT_BAR = "//div[@class='cross-product-bar__wrapper']";
 
     public HotelsSearchPage(final WebDriver driver) {
         super(driver);
@@ -26,7 +26,7 @@ public class HotelsSearchPage extends AbstractPage {
 
     public CrossProductPanel getCrossProductPanel() {
         withTimeoutOf(10, TimeUnit.SECONDS).waitFor(CROSS_PRODUCT_BAR);
-        return new CrossProductPanel(findBy(CROSS_PRODUCT_BAR),this);
+        return new CrossProductPanel(findBy(CROSS_PRODUCT_BAR), this);
     }
 
 }

@@ -133,4 +133,6 @@ public abstract class AbstractPanel {
         final FieldDecorator decorator = new SmartFieldDecorator(finder, getDriver(), driverDelegate);
         PageFactory.initElements(decorator, this);
     }
+
+
 }

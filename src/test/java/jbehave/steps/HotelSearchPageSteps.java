@@ -24,20 +24,35 @@ public class HotelSearchPageSteps extends ScenarioSteps {
     @Step
     public void typeDestination(final String destination) {
         hotelsSearchPage.getSearchByCriteriaPanel()
-                .fillDestination(destination);
+                .fillInDestination(destination);
     }
 
     @Step
-    public void typeCheckInDate(final String checkInDate) {
-
+    public void selectDate(final String[] dates, final boolean isCheckInDate) {
+        if (isCheckInDate) {
+            typeCheckInDate(dates);
+        } else {
+            typeCheckOutDate(dates);
+        }
     }
 
-    @Step
-    public void typeCheckOutDate(final String checkOutDate) {
+    private void typeCheckInDate(final String[] checkInDate) {
+        hotelsSearchPage.getSearchByCriteriaPanel()
+                .openCheckInDatePicker()
+                .selectDate(checkInDate[0])
+                .selectDayByValue((checkInDate[1]));
+    }
+
+    private void typeCheckOutDate(final String[] checkOutDate) {
+        hotelsSearchPage.getSearchByCriteriaPanel()
+                .openCheckOutDatePicker()
+                .selectDate(checkOutDate[0])
+                .selectDayByValue((checkOutDate[1]));
     }
 
     @Step
     public void clickSearchButton() {
         hotelsSearchPage.getSearchByCriteriaPanel().clickSearchButton();
     }
+
 }

@@ -4,6 +4,7 @@ public enum EnvironmentProperty {
 
     BOOKING_STORIES;
 
+
     public String readProperty() {
         return PropertiesController.getProperty(getPropertyName());
     }

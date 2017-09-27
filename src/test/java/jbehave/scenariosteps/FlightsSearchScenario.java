@@ -1,27 +1,28 @@
 package jbehave.scenariosteps;
 
+import com.structure.core.panels.CrossProductPanel;
+import jbehave.steps.CrossProductPanelSteps;
 import jbehave.steps.FlightsSearchPageSteps;
-import jbehave.steps.HotelSearchPageSteps;
 import net.thucydides.core.annotations.Steps;
+import net.thucydides.core.steps.ScenarioSteps;
 import org.jbehave.core.annotations.Given;
 import org.jbehave.core.annotations.Then;
 import org.jbehave.core.annotations.When;
 
 public class FlightsSearchScenario {
     @Steps
-    private HotelSearchPageSteps hotelSearchPageSteps;
-
+    private CrossProductPanelSteps crossProductPanelSteps;
+    @Steps
     private FlightsSearchPageSteps flightsSearchPageSteps;
 
-    @Given("user has opened 'Booking.com' site")
-
+    @Given("user has opened 'BookingFlights.com' site")
     public void userOpenedSite() {
-        hotelSearchPageSteps.openPage();
+        crossProductPanelSteps.openPage();
     }
 
-    @When("user clicks on 'Flights' button")
+    @When("user click on 'Flights' button")
     public void clickFlightsButton() {
-        flightsSearchPageSteps.clickFlightsButton();
+        crossProductPanelSteps.clickFlightsButton();
     }
 
     @When("user selects 'Departure from' by using following value: '$departureCity'")
@@ -47,7 +48,7 @@ public class FlightsSearchScenario {
     }
 
     @Then("each item from 'Search Result' list contains '$searchedText'")
-    public void isSearchResultListContainSearchText(final String searchedText) {
+    public void isSearchResultListContainsSearchText(final String searchedText) {
     }
 
 }

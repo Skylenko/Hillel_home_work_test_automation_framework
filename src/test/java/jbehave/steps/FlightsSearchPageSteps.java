@@ -8,27 +8,13 @@ import net.thucydides.core.steps.ScenarioSteps;
 
 public class FlightsSearchPageSteps extends ScenarioSteps {
 
-    private HotelsSearchPage hotelsSearchPage;
-
     private FlightsSearchPage flightsSearchPage;
 
     public FlightsSearchPageSteps(final Pages pages) {
         super(pages);
-        hotelsSearchPage = getPages().getPage(HotelsSearchPage.class);
         flightsSearchPage = getPages().getPage(FlightsSearchPage.class);
 
     }
-
-    @Step
-    public void openPage() {
-        hotelsSearchPage.open();
-    }
-
-    @Step
-    public void clickFlightsButton() {
-        hotelsSearchPage.getCrossProductPanel().clickButtonFlights();
-    }
-
 
     @Step
     public void typeDepartureCity(final String departureCity) {

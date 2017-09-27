@@ -1,6 +1,5 @@
 package com.structure.core.pages;
 
-import com.structure.core.panels.SearchByCriteriaPanel;
 import com.structure.core.panels.SearchByFlightsPanel;
 import com.structure.core.webdriver.AbstractPage;
 import net.thucydides.core.annotations.DefaultUrl;

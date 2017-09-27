@@ -1,3 +1,6 @@
+Meta:
+@Bug
+
 Narrative:
 In order to perform search correctly
 As a user
@@ -7,10 +10,19 @@ Scenario: User should have possibility to see the list of found hotels, using ow
 
 Given user has opened 'Booking.com' site
 
-When user selects 'Destination' by using following value: 'New York, New York State, USA'
-And user selects 'Check In' date by using following date: '14 September 2017'
-And user selects 'Check Out' date by using following date: '16 September 2017'
-And user clicks on 'Search' button
+When user selects 'Destination' by using following values:
+| destination                   | checkInDate       | checkOutDate      |
+| New York, New York State, USA | September 2017,29 | September 2017,30 |
 
-Then each item from 'Search Result' list contains 'New York'
+And user click on 'Search' button
+
+When user clicks on 'Superb' checkbox
+And user clicks on another 'Free cancellation' checkbox
+Then each items from 'Search Result' list contains 'Superb'
+And each item from 'Search Result' list contain 'FREE cancellation'
+!--And all item from 'Search Result' list contains 'New York'
+!--Examples:
+!--| destinationValue              | checkInDateValue  |checkOutDateValue |
+!--| New York, New York State, USA | September 2017,29 |September 2017,30 |
+
 
