@@ -12,7 +12,6 @@ import java.util.concurrent.TimeUnit;
 public class HotelsSearchPage extends AbstractPage {
 
     private static final String SEARCH_BY_CRITERIA_PANEL = "//form[@id='frm']";
-
     private static final String CROSS_PRODUCT_BAR = "//div[@class='cross-product-bar__wrapper']";
 
     public HotelsSearchPage(final WebDriver driver) {

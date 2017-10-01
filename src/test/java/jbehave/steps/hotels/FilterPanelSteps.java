@@ -27,7 +27,7 @@ public class FilterPanelSteps extends ScenarioSteps {
     }
 
     @Step
-    public boolean isSearchResultListContainsFirstFilterParameter(final String firstFilter){
+    public boolean isSearchResultListContainsFirstFilterParameter(final String firstFilter) {
 
         return searchResultPage.getResultsPanel()
                 .getResultItemsByFirstFilter().stream().allMatch(s -> s.contains(firstFilter));

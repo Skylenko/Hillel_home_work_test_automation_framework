@@ -23,7 +23,6 @@ public class FilterPanel extends AbstractPanel {
     public void checkSecondFiltr() {
         isElementPresent(CHECKED_POPULAR);
         findBy(CHECK_CANCELLATION).then().click();
-
         try {
             TimeUnit.SECONDS.sleep(5);
         } catch (InterruptedException e) {

@@ -10,13 +10,10 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class SearchByCriteriaPanel extends AbstractPanel {
 
     private static final String DESTINATION_INPUT = ".//input[contains(@class, 'sb-destination__input')]";
-
     private static final String OPEN_CHECK_IN_INPUT_DATEPICKER = "(.//i[contains(@class, 'bicon-downchevron')])[1]";
     private static final String OPEN_CHECK_OUT_INPUT_DATEPICKER = "(.//i[contains(@class, 'bicon-downchevron')])[2]";
-
     private static final String CHECK_IN_DATEPICKER_PANEL = "(.//div[@class='c2-calendar'])[1]";
     private static final String CHECK_OUT_DATEPICKER_PANEL = "(.//div[@class='c2-calendar'])[2]";
-
     private static final String AUTOCOMPLETE_LIST = "//ul[contains(@aria-label, 'List of suggested destinations')]//li";
     private static final String SEARCH_BUTTON = "(.//button[contains(@class, 'sb-searchbox__button')]//span)[1]";
 

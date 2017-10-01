@@ -84,7 +84,7 @@ public class BookingSearchScenario {
     }
 
     @Then("each items from 'Search Result' list contains '$firstFilter'")
-    public void isSearchResultListContainsFirstFilterParameter(final String firstFilter){
+    public void isSearchResultListContainsFirstFilterParameter(final String firstFilter) {
         Assert.assertTrue(filterPanelSteps.isSearchResultListContainsFirstFilterParameter(firstFilter));
     }
 
@@ -92,6 +92,7 @@ public class BookingSearchScenario {
     public void isSearchResultListContainsSecondFilterParameter(final String secondFilter) {
         Assert.assertTrue(filterPanelSteps.isSearchResultListContainsSecondFilterParameter(secondFilter));
     }
+
     @Then("all item from 'Search Result' list contains '$searchedText'")
     public void isSearchResultListContainSearchText(final String searchedText) {
         Assert.assertTrue(searchResultPageSteps.isSearchResultListContainSearchText(searchedText));

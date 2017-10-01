@@ -7,7 +7,6 @@ import org.openqa.selenium.WebDriver;
 
 import java.util.concurrent.TimeUnit;
 
-
 public class SearchResultPage extends AbstractPage {
 
     private static final String RESULTS_PANEL = "//div[@id='hotellist_inner']";
