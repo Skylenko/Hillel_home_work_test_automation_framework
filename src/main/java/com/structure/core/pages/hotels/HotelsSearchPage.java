@@ -1,6 +1,6 @@
-package com.structure.core.pages;
+package com.structure.core.pages.hotels;
 
-import com.structure.core.panels.CrossProductPanel;
+import com.structure.core.panels.flights.CrossProductPanel;
 import com.structure.core.panels.SearchByCriteriaPanel;
 import com.structure.core.webdriver.AbstractPage;
 import net.thucydides.core.annotations.DefaultUrl;

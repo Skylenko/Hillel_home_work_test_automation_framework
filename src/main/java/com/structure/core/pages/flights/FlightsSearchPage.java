@@ -1,6 +1,6 @@
-package com.structure.core.pages;
+package com.structure.core.pages.flights;
 
-import com.structure.core.panels.SearchByFlightsPanel;
+import com.structure.core.panels.flights.SearchByFlightsPanel;
 import com.structure.core.webdriver.AbstractPage;
 import net.thucydides.core.annotations.DefaultUrl;
 import org.openqa.selenium.WebDriver;

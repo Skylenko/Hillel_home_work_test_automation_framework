@@ -1,6 +1,6 @@
-package jbehave.steps;
+package jbehave.steps.hotels;
 
-import com.structure.core.pages.SearchResultPage;
+import com.structure.core.pages.hotels.SearchResultPage;
 import net.thucydides.core.annotations.Step;
 import net.thucydides.core.pages.Pages;
 import net.thucydides.core.steps.ScenarioSteps;

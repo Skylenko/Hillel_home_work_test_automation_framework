@@ -1,4 +1,4 @@
-package com.structure.core.pages;
+package com.structure.core.pages.hotels;
 
 import com.structure.core.panels.FilterPanel;
 import com.structure.core.panels.ResultsPanel;

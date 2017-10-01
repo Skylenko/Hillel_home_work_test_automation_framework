@@ -1,10 +1,9 @@
 package jbehave.scenariosteps;
 
-import com.structure.core.panels.CrossProductPanel;
-import jbehave.steps.CrossProductPanelSteps;
-import jbehave.steps.FlightsSearchPageSteps;
+import jbehave.steps.flights.CrossProductPanelSteps;
+import jbehave.steps.flights.FlightsSearchPageSteps;
 import net.thucydides.core.annotations.Steps;
-import net.thucydides.core.steps.ScenarioSteps;
+import org.apache.commons.lang3.StringUtils;
 import org.jbehave.core.annotations.Given;
 import org.jbehave.core.annotations.Then;
 import org.jbehave.core.annotations.When;
@@ -14,6 +13,8 @@ public class FlightsSearchScenario {
     private CrossProductPanelSteps crossProductPanelSteps;
     @Steps
     private FlightsSearchPageSteps flightsSearchPageSteps;
+
+    private static final String DELIMETR = ",";
 
     @Given("user has opened 'BookingFlights.com' site")
     public void userOpenedSite() {
@@ -37,14 +38,19 @@ public class FlightsSearchScenario {
 
     @When("user selects 'Departure' date by using following date: $departureDate")
     public void typeDepartureDate(final String departureDate) {
+        final String[] dates = StringUtils.split(departureDate, DELIMETR);
+        flightsSearchPageSteps.selectDate(dates, true);
     }
 
     @When("user selects 'Arrival' date by using following date: $arrivalDate")
     public void typeArrivalDate(final String arrivalDate) {
+        final String[] dates = StringUtils.split(arrivalDate, DELIMETR);
+        flightsSearchPageSteps.selectDate(dates, true);
     }
 
     @When("user clicks on 'Search' button")
     public void clickSearchButton() {
+        flightsSearchPageSteps.clickSearchButton();
     }
 
     @Then("each item from 'Search Result' list contains '$searchedText'")

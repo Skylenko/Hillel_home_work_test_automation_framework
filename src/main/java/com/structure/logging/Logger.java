@@ -110,4 +110,6 @@ public class Logger {
     private String objectsAsString(final Object... objects) {
         return StringUtils.join(objects, ", ");
     }
+
+
 }

@@ -115,16 +115,6 @@
     <orderEntry type="library" name="Maven: com.typesafe:config:1.2.1" level="project" />
     <orderEntry type="library" name="Maven: com.google.jimfs:jimfs:1.0" level="project" />
     <orderEntry type="library" name="Maven: es.nitaur.markdown:txtmark:0.16" level="project" />
-    <orderEntry type="library" name="Maven: com.microsoft.sqlserver:mssql-jdbc:6.1.0.jre8" level="project" />
-    <orderEntry type="library" name="Maven: com.microsoft.azure:azure-keyvault:0.9.3" level="project" />
-    <orderEntry type="library" name="Maven: com.microsoft.azure:azure-core:0.9.3" level="project" />
-    <orderEntry type="library" name="Maven: commons-lang:commons-lang:2.6" level="project" />
-    <orderEntry type="library" name="Maven: javax.mail:mail:1.4.5" level="project" />
-    <orderEntry type="library" name="Maven: com.microsoft.azure:adal4j:1.0.0" level="project" />
-    <orderEntry type="library" name="Maven: com.nimbusds:oauth2-oidc-sdk:4.5" level="project" />
-    <orderEntry type="library" name="Maven: net.minidev:json-smart:1.1.1" level="project" />
-    <orderEntry type="library" name="Maven: com.nimbusds:lang-tag:1.4" level="project" />
-    <orderEntry type="library" name="Maven: com.nimbusds:nimbus-jose-jwt:3.1.2" level="project" />
     <orderEntry type="library" name="Maven: net.serenity-bdd:serenity-jbehave:1.24.0" level="project" />
     <orderEntry type="library" name="Maven: de.codecentric:jbehave-junit-runner:1.2.0" level="project" />
     <orderEntry type="library" name="Maven: org.codehaus.groovy:groovy-all:2.4.4" level="project" />
@@ -151,6 +141,7 @@
     <orderEntry type="library" name="Maven: javax.ws.rs:jsr311-api:1.1.1" level="project" />
     <orderEntry type="library" name="Maven: com.google.code.gson:gson:2.8.0" level="project" />
     <orderEntry type="library" name="Maven: org.slf4j:slf4j-simple:1.8.0-alpha2" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.xerial:sqlite-jdbc:3.20.0" level="project" />
     <orderEntry type="library" name="Maven: org.hamcrest:hamcrest-all:1.3" level="project" />
     <orderEntry type="library" name="Maven: com.sun.jersey:jersey-client:1.19.3" level="project" />
     <orderEntry type="library" name="Maven: log4j:log4j:1.2.12" level="project" />

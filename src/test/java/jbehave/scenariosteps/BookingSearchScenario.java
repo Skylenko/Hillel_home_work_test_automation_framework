@@ -1,9 +1,9 @@
 package jbehave.scenariosteps;
 
 import com.util.DbUtil;
-import jbehave.steps.FilterPanelSteps;
-import jbehave.steps.HotelSearchPageSteps;
-import jbehave.steps.SearchResultPageSteps;
+import jbehave.steps.hotels.FilterPanelSteps;
+import jbehave.steps.hotels.HotelSearchPageSteps;
+import jbehave.steps.hotels.SearchResultPageSteps;
 import net.thucydides.core.annotations.Steps;
 import org.apache.commons.lang3.StringUtils;
 import org.jbehave.core.annotations.Given;
@@ -41,7 +41,7 @@ public class BookingSearchScenario {
 
     @When("user selects 'Destination' by using following values:$values")
     public void selectDestination(final ExamplesTable examplesTable) throws SQLException {
-        // final List<String> headers = examplesTable.getHeaders();
+
         final List<Map<String, String>> rows = examplesTable.getRows();
         for (int index = 0; index < rows.size(); index++) {
             final Map<String, String> row = rows.get(index);
