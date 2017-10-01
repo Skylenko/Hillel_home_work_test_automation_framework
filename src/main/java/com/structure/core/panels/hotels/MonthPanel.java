@@ -1,4 +1,4 @@
-package com.structure.core.panels;
+package com.structure.core.panels.hotels;
 
 import com.structure.core.BaseDatePickerPanel;
 import com.structure.core.webdriver.AbstractPage;
@@ -10,7 +10,7 @@ public class MonthPanel extends AbstractPanel implements BaseDatePickerPanel {
 
     private static final String DAYS_OF_MONTH = ".//span[@class='c2-day-inner']";
 
-    protected MonthPanel(WebElementFacade panelBaseLocation, AbstractPage driverDelegate) {
+    public MonthPanel(WebElementFacade panelBaseLocation, AbstractPage driverDelegate) {
         super(panelBaseLocation, driverDelegate);
     }
     @Override

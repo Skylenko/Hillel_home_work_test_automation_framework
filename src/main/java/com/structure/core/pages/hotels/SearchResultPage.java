@@ -1,7 +1,7 @@
 package com.structure.core.pages.hotels;
 
-import com.structure.core.panels.FilterPanel;
-import com.structure.core.panels.ResultsPanel;
+import com.structure.core.panels.hotels.FilterPanel;
+import com.structure.core.panels.hotels.ResultsPanel;
 import com.structure.core.webdriver.AbstractPage;
 import org.openqa.selenium.WebDriver;
 

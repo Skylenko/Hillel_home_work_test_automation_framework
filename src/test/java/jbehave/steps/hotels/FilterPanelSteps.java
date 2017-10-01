@@ -4,7 +4,6 @@ import com.structure.core.pages.hotels.SearchResultPage;
 import net.thucydides.core.annotations.Step;
 import net.thucydides.core.pages.Pages;
 import net.thucydides.core.steps.ScenarioSteps;
-import org.openqa.selenium.support.ui.Wait;
 
 public class FilterPanelSteps extends ScenarioSteps {
 
@@ -31,11 +30,11 @@ public class FilterPanelSteps extends ScenarioSteps {
     public boolean isSearchResultListContainsFirstFilterParameter(final String firstFilter){
 
         return searchResultPage.getResultsPanel()
-                .getResultItemsByFirstFiltr().stream().allMatch(s -> s.contains(firstFilter));
+                .getResultItemsByFirstFilter().stream().allMatch(s -> s.contains(firstFilter));
     }
 
     @Step
     public boolean isSearchResultListContainsSecondFilterParameter(final String secondFilter) {
-        return searchResultPage.getResultsPanel().getResultBySecondFiltr().stream().allMatch(s -> s.contains(secondFilter));
+        return searchResultPage.getResultsPanel().getResultBySecondFilter().stream().allMatch(s -> s.contains(secondFilter));
     }
 }

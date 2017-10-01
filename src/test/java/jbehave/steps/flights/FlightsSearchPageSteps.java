@@ -12,7 +12,6 @@ public class FlightsSearchPageSteps extends ScenarioSteps {
     public FlightsSearchPageSteps(final Pages pages) {
         super(pages);
         flightsSearchPage = getPages().getPage(FlightsSearchPage.class);
-
     }
 
     @Step
@@ -26,7 +25,6 @@ public class FlightsSearchPageSteps extends ScenarioSteps {
     }
 
     @Step
-
     public void selectDate(final String[] dates, final boolean isCheckInDate) {
         if (isCheckInDate) {
             typeCheckInDate(dates);
@@ -52,7 +50,13 @@ public class FlightsSearchPageSteps extends ScenarioSteps {
 
     @Step
     public void clickSearchButton() {
+        flightsSearchPage.getSearchByFlightsPanel().search();
 
+    }
+
+    @Step
+    public boolean isSearchResultListContainsParameter(final String searchedText) {
+        return flightsSearchPage.getResultPanel().getResultByParameter().stream().allMatch(s -> s.contains(searchedText));
     }
 }
 

@@ -1,4 +1,4 @@
-package com.structure.core.panels;
+package com.structure.core.panels.hotels;
 
 import com.structure.core.webdriver.AbstractPage;
 import com.structure.core.webdriver.AbstractPanel;
@@ -18,7 +18,8 @@ public class DatePickerPanel extends AbstractPanel {
         while (!monthPanel.isDisplayed()) {
             findBy(NEXT_MONTH_BUTTON).then().click();
 
-        }return new MonthPanel(monthPanel, getDriverDelegate());
+        }
+        return new MonthPanel(monthPanel, getDriverDelegate());
     }
 
 }

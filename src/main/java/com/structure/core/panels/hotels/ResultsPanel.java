@@ -1,4 +1,4 @@
-package com.structure.core.panels;
+package com.structure.core.panels.hotels;
 
 import com.structure.core.webdriver.AbstractPage;
 import com.structure.core.webdriver.AbstractPanel;
@@ -19,14 +19,14 @@ public class ResultsPanel extends AbstractPanel {
         super(panelBaseLocation, driverDelegate);
     }
 
-    public List<String> getResultItemsByFirstFiltr() {
+    public List<String> getResultItemsByFirstFilter() {
         return findMultipleBy(SEARCH_RESULT_BY_MARK_FILTER)
                 .stream()
                 .map(element -> element.getText().replaceAll("\n|\r\n", ""))
                 .collect(Collectors.toList());
     }
 
-    public List<String> getResultBySecondFiltr() {
+    public List<String> getResultBySecondFilter() {
         return findMultipleBy(SEARCH_RESULT_BY_CANCELLETION)
                 .stream()
                 .map(WebElementFacade::getText)

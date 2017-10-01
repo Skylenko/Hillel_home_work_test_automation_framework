@@ -1,6 +1,5 @@
 package com.structure.core.panels.flights;
 
-import com.google.common.collect.Lists;
 import com.structure.core.BaseDatePickerPanel;
 import com.structure.core.webdriver.AbstractPage;
 import com.structure.core.webdriver.AbstractPanel;
@@ -20,11 +19,10 @@ public class FlightsMonthPanel extends AbstractPanel implements BaseDatePickerPa
 
     @Override
     public void selectDayByValue(final String day) {
-        List<WebElementFacade> aaa = new ArrayList<>();
-        aaa.addAll(findMultipleBy(DAYS_OF_MONTH));
-        aaa.addAll(findMultipleBy(DAYS_OF_MONTH_2));
-
-        aaa.stream()
+        List<WebElementFacade> allDays = new ArrayList<>();
+        allDays.addAll(findMultipleBy(DAYS_OF_MONTH));
+        allDays.addAll(findMultipleBy(DAYS_OF_MONTH_2));
+        allDays.stream()
                 .filter(element -> element.getText().equals(day))
                 .findFirst()
                 .ifPresent(WebElementFacade::click);

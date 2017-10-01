@@ -7,6 +7,7 @@ import org.apache.commons.lang3.StringUtils;
 import org.jbehave.core.annotations.Given;
 import org.jbehave.core.annotations.Then;
 import org.jbehave.core.annotations.When;
+import org.junit.Assert;
 
 public class FlightsSearchScenario {
     @Steps
@@ -55,6 +56,7 @@ public class FlightsSearchScenario {
 
     @Then("each item from 'Search Result' list contains '$searchedText'")
     public void isSearchResultListContainsSearchText(final String searchedText) {
+        Assert.assertTrue(flightsSearchPageSteps.isSearchResultListContainsParameter(searchedText));
     }
 
 }

@@ -1,4 +1,4 @@
-package com.structure.core.panels;
+package com.structure.core.panels.hotels;
 
 import com.structure.core.webdriver.AbstractPage;
 import com.structure.core.webdriver.AbstractPanel;
